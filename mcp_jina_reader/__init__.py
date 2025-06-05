@@ -1,4 +1,4 @@
-from mcp_jina_reader import serve
+from .main import serve
 
 
 def main():
