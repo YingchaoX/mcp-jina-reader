@@ -13,7 +13,8 @@ JINA_SEARCH_ENDPOINT = "https://s.jina.ai/"
 JINA_READ_PREFIX = "https://r.jina.ai/"
 
 api_key = os.getenv("JINA_API_KEY")
-timeout = os.getenv("JINA_TIMEOUT", 10)
+# Ensure timeout is an integer to avoid httpx errors
+timeout = int(os.getenv("JINA_TIMEOUT", "10"))
 
 
 class JinaTools(str, Enum):
